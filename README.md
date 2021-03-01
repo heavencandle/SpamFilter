@@ -2,7 +2,7 @@
 1. 요약
   - 본 프로젝트는 이메일 내 불필요한 스팸메일을 구분하기 위해 진행되었다. 스팸 여부가 표시되어 있는 메일 데이터를 사용하였으며, fasttext와 CNN을 사용하여 binary classification을 진행하였다. 
   - 가장 성능이 좋은 CNN 모델은 2-gram~6-gram을 사용한 train 모델(11050156_100_0.0512.hdf5)로 test accuracy(leader board data 사용)은 94.979%의 성능을 보였다.   
-    |test_size|val_size|test_size|epochs|batch_size|early stopping|patience|
+    |test_size|val_size|test_size|epochs|batch_size|early stopping patience|
     |0.8|0.2|0.1|100|128|30|
     *[표_11050156_100_0.0512.hdf5 모델의 hyperparameters]*
 
