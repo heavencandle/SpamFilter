@@ -16,10 +16,10 @@
   - spamFilter.py는 1) main과 2) class SpamFilter()와 두가지 부분으로 이루어져 있다. 
     3-1. main
       - 사용자가 입력한 모드에 따라, Train, Test, Infer 기능을 수행할 수 있다. 
-        |Mode Number	|Mode	|Description|
-        |0	|Train	|새로운 classification model을 학습함|
-        |1	|Test	|모델 훈련시 분리한 test data를 사용하여 accuracy 측정|
-        |2	|Infer|	label이 없는 데이터와 pre-trained model을 사용하여 class 예측|
+|Mode Number|Mode|Description|
+|0|Train|새로운 classification model을 학습함|
+|1|Test|모델 훈련시 분리한 test data를 사용하여 accuracy 측정|
+|2|Infer|label이 없는 데이터와 pre-trained model을 사용하여 class 예측|
 *[표_프로그램 실행 mode]*
     3-2. class SpamFilter()
     ![image](https://user-images.githubusercontent.com/62787552/109521364-937b4080-7af0-11eb-9b87-fc590952a3c7.png)
