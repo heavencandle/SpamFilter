@@ -1,9 +1,12 @@
 # SpamFilter
 1. 요약
   - 본 프로젝트는 이메일 내 불필요한 스팸메일을 구분하기 위해 진행되었다. 스팸 여부가 표시되어 있는 메일 데이터를 사용하였으며, fasttext와 CNN을 사용하여 binary classification을 진행하였다. 
-  - 가장 성능이 좋은 CNN 모델은 2-gram~6-gram을 사용한 train 모델(11050156_100_0.0512.hdf5)로 test accuracy(leader board data 사용)은 94.979%의 성능을 보였다.   
+  - 가장 성능이 좋은 CNN 모델은 2-gram~6-gram을 사용한 train 모델(11050156_100_0.0512.hdf5)로 test accuracy(leader board data 사용)은 94.979%의 성능을 보였다.  
+
     |test_size|val_size|test_size|epochs|batch_size|early stopping patience|
-    |0.8|0.2|0.1|100|128|30|
+    |---|---|---|---|---|---|
+    |0.8|0.2|0.1|100|128|30|  
+
     *[표_11050156_100_0.0512.hdf5 모델의 hyperparameters]*
 
 2. 프로젝트 개요 및 primitives
@@ -14,14 +17,17 @@
 
 3. 프로그램 구성 및 세부사항
   - spamFilter.py는 1) main과 2) class SpamFilter()와 두가지 부분으로 이루어져 있다. 
-    3-1. main
-      - 사용자가 입력한 모드에 따라, Train, Test, Infer 기능을 수행할 수 있다. 
-|Mode Number|Mode|Description|
-|0|Train|새로운 classification model을 학습함|
-|1|Test|모델 훈련시 분리한 test data를 사용하여 accuracy 측정|
-|2|Infer|label이 없는 데이터와 pre-trained model을 사용하여 class 예측|
-*[표_프로그램 실행 mode]*
-    3-2. class SpamFilter()
-    ![image](https://user-images.githubusercontent.com/62787552/109521364-937b4080-7af0-11eb-9b87-fc590952a3c7.png)
+  - 3-1. main
+    - 사용자가 입력한 모드에 따라, Train, Test, Infer 기능을 수행할 수 있다.  
+
+      |Mode Number|Mode|Description|
+      |---|---|---|
+      |0|Train|새로운 classification model을 학습함|
+      |1|Test|모델 훈련시 분리한 test data를 사용하여 accuracy 측정|
+      |2|Infer|label이 없는 데이터와 pre-trained model을 사용하여 class 예측|  
+
+        *[표_프로그램 실행 mode]*
+  - 3-2. class SpamFilter()  
+    ![image](https://user-images.githubusercontent.com/62787552/109521364-937b4080-7af0-11eb-9b87-fc590952a3c7.png)  
     *[그림_SpamFilter 구조]*
 
